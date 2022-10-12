@@ -1,0 +1,6 @@
+*.o
+*ROC.txt
+predict.txt
+evaluation/evaluate
+originalPics/
+FDDB-folds/
