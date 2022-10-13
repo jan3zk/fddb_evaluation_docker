@@ -2,8 +2,9 @@ Docker image for [FDDB (Face Detection Data Set and Benchmark)](http://vis-www.c
 
 ## Usage
 
-Make sure you have the following directory structure in `FDDB_HOME`:
+Download [originalPics](http://vis-www.cs.umass.edu/fddb/originalPics.tar.gz) and [FDDB-folds](http://vis-www.cs.umass.edu/fddb/FDDB-folds.tgz).
 
+Make sure you have the following directory structure in `FDDB_HOME`:
 ```
 originalPics/
    2002/
@@ -17,7 +18,6 @@ detections/
    FDDB-fold-02.txt
    (...)
 ```
-Download [originalPics](http://vis-www.cs.umass.edu/fddb/originalPics.tar.gz) and [FDDB-folds](http://vis-www.cs.umass.edu/fddb/FDDB-folds.tgz).
 
 Install docker by running:
 ```bash
