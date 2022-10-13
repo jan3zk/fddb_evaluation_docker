@@ -14,8 +14,8 @@ FDDB-folds/
    FDDB-fold-01.txt
    (...)
 detections/
-   FDDB-fold-01.txt
-   FDDB-fold-02.txt
+   fold-01-out.txt
+   fold-02-out.txt
    (...)
 ```
 
