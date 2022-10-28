@@ -1,5 +1,7 @@
 *.o
 *ROC.txt
+*.tgz
+*.tar.gz
 predict.txt
 evaluation/evaluate
 originalPics/

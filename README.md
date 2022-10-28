@@ -2,9 +2,28 @@ Docker image for [FDDB (Face Detection Data Set and Benchmark)](http://vis-www.c
 
 ## Usage
 
-Download [originalPics](http://vis-www.cs.umass.edu/fddb/originalPics.tar.gz) and [FDDB-folds](http://vis-www.cs.umass.edu/fddb/FDDB-folds.tgz).
+Clone this repository:
+```bash
+git clone https://github.com/jan3zk/fddb_evaluation_docker.git
+cd fddb_evaluation_docker/
+```
 
-Make sure you have the following directory structure in `FDDB_HOME`:
+Download originalPics:
+```bash
+wget http://vis-www.cs.umass.edu/fddb/originalPics.tar.gz
+tar -xvf originalPics.tar.gz
+mkdir originalPics
+mv 2002 originalPics/
+mv 2003 originalPics/
+```
+
+Download FDDB-folds:
+```bash
+wget http://vis-www.cs.umass.edu/fddb/FDDB-folds.tgz
+tar -xvf FDDB-folds.tgz
+```
+
+After executing above commands, make sure you have the following directory structure in `FDDB_HOME`:
 ```
 originalPics/
    2002/
@@ -19,7 +38,7 @@ detections/
    (...)
 ```
 
-Install docker by running:
+Install docker:
 ```bash
 sudo apt-get install docker.io
 sudo service docker start
@@ -27,11 +46,9 @@ sudo service docker start
 
 Run the command below mapping `FDDB_HOME` to `/FDDB`:
 ```bash
-docker run --rm -it \
-   -v ${FDDB_HOME}:/FDDB \
-   housebw/fddb-evaluator
+docker run --rm -it -v ${FDDB_HOME}:/FDDB housebw/fddb-evaluator
 ```
-where `FDDB_HOME` should be set to the folder of this repository.
+where `FDDB_HOME` should be set to the folder where this repository was cloned to, e.g. `FDDB_HOME=/home/my_name/fddb_evaluation_docker/`.
 
 If everything goes fine you should see:
 ```bash
